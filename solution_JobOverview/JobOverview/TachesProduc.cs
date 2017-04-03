@@ -6,6 +6,20 @@ using System.Threading.Tasks;
 
 namespace JobOverview
 {
+    public enum Activites
+    {
+        DBE,
+        ARF,
+        ANF,
+        DES,
+        INF,
+        ART,
+        ANT,
+        DEV,
+        RPT,
+        TES,
+        GDP
+    }
     public class TachesProduc : Taches
     {
         #region Propriété
@@ -21,7 +35,7 @@ namespace JobOverview
         public int Restant { get; }
         #endregion
         #region Constructeur
-        public TachesProduc(int numTache, string version, Personne personne, Activites activité, 
+        public TachesProduc(int numTache, string version, Personne personne, Activites activité,
                 string libTache, DateTime dateDeb, int prevu, int realise, int restant) : base()
         {
             NumTache = numTache;

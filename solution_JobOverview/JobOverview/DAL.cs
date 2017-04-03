@@ -7,21 +7,8 @@ using System.Threading.Tasks;
 
 namespace JobOverview
 {
+    
 
-    public enum Activites
-    {
-        DBE,
-        ARF,
-        ANF,       
-        DES,
-        INF,
-        ART,
-        ANT,
-        DEV,
-        RPT,
-        TES,
-        GDP
-    }
     public static class DAL
     {
         #region Champs privés
@@ -73,7 +60,7 @@ namespace JobOverview
         public static Projet ChargerDonnées(string path)
         {
             Projet projet = new Projet();
-            // TODO : implémenter DAL::ChargerDonnées()
+          
             string[] data = File.ReadAllLines(path);
             string[] ligne;
             for(int i = 1; i < data.Length; i++)
@@ -82,7 +69,7 @@ namespace JobOverview
                 projet.AddTache(new TachesProduc(int.Parse(ligne[0]), ligne[1], DicoPersonnes[ligne[2]], DicoActivite[ligne[3]],ligne[4],
                         DateTime.Parse(ligne[5]),int.Parse(ligne[6]), int.Parse(ligne[7]), int.Parse(ligne[8])));
             }
-
+            
             return projet;
         }
         #endregion
