@@ -13,17 +13,20 @@ namespace JobOverview
         #endregion
 
         #region Propriétés
+        #endregion
+
+        #region Constructeurs
         public Projet()
         {
             _tachesProd = new List<TachesProduc>();
         }
-        #endregion
-
-        #region Constructeurs
 
         #endregion
 
         #region Méthodes privés
+        public List<TachesProduc> TachesProduc { get { return _tachesProd; } }
+
+
 
         #endregion
 

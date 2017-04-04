@@ -6,14 +6,28 @@ using System.Threading.Tasks;
 
 namespace JobOverview
 {
-    public class TachesProduc : Taches
+    public enum Activites
+    {
+        DBE,
+        ARF,
+        ANF,
+        DES,
+        INF,
+        ART,
+        ANT,
+        DEV,
+        RPT,
+        TES,
+        GDP
+    }
+    public class TachesProduc 
     {
         #region Propriété
         public int NumTache { get; }
         public string Version { get; }
         public Personne Personne { get; }
         public Activites Activité { get; }
-        // TODO : implémenter le type Activité 
+
         public string LibTache { get; }
         public DateTime DateDeb { get; }
         public int Prevu { get; set; }
@@ -21,8 +35,8 @@ namespace JobOverview
         public int Restant { get; }
         #endregion
         #region Constructeur
-        public TachesProduc(int numTache, string version, Personne personne, Activites activité, 
-                string libTache, DateTime dateDeb, int prevu, int realise, int restant) : base()
+        public TachesProduc(int numTache, string version, Personne personne, Activites activité,
+                string libTache, DateTime dateDeb, int prevu, int realise, int restant)
         {
             NumTache = numTache;
             Version = version;
